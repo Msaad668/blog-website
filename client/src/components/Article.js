@@ -11,7 +11,9 @@ const Article = (props) => {
 
   const { match } = props;
   useEffect(() => {
-    Axios.get(`http://localhost:5000/articles/${props.match.params.id}`)
+    Axios.get(
+      `https://tech-blog1.herokuapp.com/articles/${props.match.params.id}`
+    )
       .then((res) => {
         setTitle(res.data.title);
         setArticle(res.data.article);

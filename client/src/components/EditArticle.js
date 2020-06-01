@@ -10,7 +10,7 @@ const EditArticle = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/articles/${props.match.params.id}`)
+      .get(`https://tech-blog1.herokuapp.com/articles/${props.match.params.id}`)
       .then((res) => {
         setTitle(res.data.title);
         setArticle(res.data.article);

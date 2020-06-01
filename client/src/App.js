@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/articles")
+      .get("https://tech-blog1.herokuapp.com/articles")
       .then((res) => setPosts(res.data))
       .catch((err) => console.log(err));
   });
@@ -34,7 +34,7 @@ function App() {
       <Route
         exact
         path='/edit-article/:id'
-        render={(props) => <EditArticle {...props}  />}
+        render={(props) => <EditArticle {...props} />}
       />
       <Route exact path='/add-article' component={AddArticle} />
       <Footer />

@@ -6,7 +6,7 @@ import Axios from "axios";
 
 const Articles = ({ posts }) => {
   const deleteHandeler = (id) => {
-    Axios.delete(`http://localhost:5000/articles/${id}`)
+    Axios.delete(`https://tech-blog1.herokuapp.com/articles/${id}`)
       .then(() => alert("article deleted"))
       .catch((err) => console.log(err));
   };

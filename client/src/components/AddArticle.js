@@ -22,7 +22,7 @@ const AddArticle = () => {
     setAuthorname("");
 
     axios
-      .post("http://localhost:5000/articles/add", articles)
+      .post("https://tech-blog1.herokuapp.com/articles/add", articles)
       .then(() => setDone(true))
       .catch((err) => console.log(err));
   };
